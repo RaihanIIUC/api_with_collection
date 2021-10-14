@@ -21,6 +21,9 @@ class CreateBooksTable extends Migration
             $table->text('description');
             $table->timestamps();
 
+            /**
+             * question about foreign table refrence on 
+             */
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
     
         });
