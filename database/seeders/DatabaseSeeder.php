@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(CategorySeeder::class);
         $this->call(MovieSeeder::class);
-        $this->call(RatingSeeder::class);
+        // $this->call(RatingSeeder::class);
     }
 }
