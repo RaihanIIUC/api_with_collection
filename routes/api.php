@@ -6,6 +6,7 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\PassportAuthController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RatingController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,7 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('movies', MovieController::class);
     Route::resource('categorys', CategoryController::class);
     Route::resource('ratings', RatingController::class);
-
+    Route::resource('doctors', UserController::class)->only(['show']);
+    
 });
 Route::apiResource('books', BookController::class);

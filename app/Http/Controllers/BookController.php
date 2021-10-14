@@ -50,9 +50,10 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(book $book)
+    public function show($id)
     {
-        return new BookResource($book);
+        $books = Book::all($id);
+        return new BookResource($books);
     }
 
     /**
