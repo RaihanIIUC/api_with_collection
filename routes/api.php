@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\PassportAuthController;
@@ -27,4 +28,6 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('movies', MovieController::class);
     Route::resource('categorys', CategoryController::class);
     Route::resource('ratings', RatingController::class);
+
 });
+Route::apiResource('books', BookController::class);
